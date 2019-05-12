@@ -1,0 +1,35 @@
+.jumbotron-fluid, 
+.container {
+    background-color:#F0F8FF;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/564x/3d/30/50/3d30508e88f8fe84f9fbd7fa16f2e3f1.jpg"); 
+}
+
+.jumbo-container {
+    margin: 30px;
+    text-align: left;
+    color:#8B008B;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+.row{
+    padding:30px;
+    margin: 20px; 
+    text-align: left;
+    
+}
+
+.card-body {
+    width: 300px; 
+    height: 300px; 
+    
+}
+
+.aside {
+    position:absolute;
+}
+

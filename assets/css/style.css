@@ -9,27 +9,26 @@ body {
 
 .jumbo-container {
     margin: 30px;
-    text-align: left;
+    text-align: center;
     color:#8B008B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
 }
 
-.row{
+.row {
     padding:30px;
     margin: 20px; 
     text-align: left;
     
 }
 
-.card-body {
-    width: 300px; 
-    height: 300px; 
-    
+.images-center {
+    margin: 10px; 
+    padding:5px; 
 }
 
-.aside {
-    position:absolute;
+img {
+    margin: 60px; 
+    align-items: center;
 }
-

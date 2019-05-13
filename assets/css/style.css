@@ -32,3 +32,9 @@ img {
     margin: 60px; 
     align-items: center;
 }
+
+.card {
+    float:left; 
+    width: 200px;
+    height:200px;
+}

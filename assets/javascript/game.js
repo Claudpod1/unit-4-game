@@ -1,48 +1,98 @@
- //global variables 
+//global variables
+
+var crystal = {
+    blue:
+    { name: "blue",
+     value: 0
+    },
+    red:
+    {name: "red",
+        value: 0
+    },
+    green:
+    {name: "green",
+        value: 0
+    },
+    yellow:
+    {name: "yellow",
+        value:0
+    }
+};
+
 var wins = 0;
-var losses = 0; 
+var losses = 0;
+
 var targetScore = "";
 var yourScore = "";
-var crystalOptions = {
-    crystal1:"red" , 
-    crystal2:"blue", 
-    crystal3:"green",
-    crystal4:"yellow",
-}
-
-for (var i = 0; i < 4; i++){
-    var crystal = $("<div>");
-    $(".crystals").append(crystal);
-}
-
-console.log(crystal);
-
-//var randomNum=  generateRandom(); 
-
-
-//var score = your score + crystalValue;
-// array of crystals object ( toloop through )
-
-
-//dynamically create crystals on the page 
-// each crystal needs a score, an image ( aka a strinf holding the path to the image which is saved in a folder in your folder), an object with all of this info ( aka key value pairs )
-
-
+////var randomNum=  generateRandom(); 
 // Randome Number Function : eg function generateRandom()
 
 
-//something with math......
-// assign a value for each crystal 
-// return a random number 
 
+    var getRandom = function (min, max) {
+        return Math.floor((Math.random() * max - min + 1) + min);
+    };
 
-// click event function 
-//each crystal should have the same class so that you dont need 4 seperate click events. 
+    //start the game 
+    var initGame = function () {
+        currentScore = 0;
+        targetNumber = getRandom(19, 120);
+        console.log(targetNumber);
+        $(".targetScore").html(targetNumber);
+        $(".yourScore").html(currentScore);
+    };
 
-// start/reset - 
-// clear variables 
-//set target score 
-// assign a value for each crystal /// .empty
-// if yourScore is greater than target score then 
-//if yourScore is less than, then ...
-// compare to score 
+    crystal.blue.value= getRandom(1, 12);
+    crystal.red.value = getRandom(1, 12);
+    crystal.green.value= getRandom(1, 12);
+    crystal.yellow.value = getRandom(1, 12);
+
+    //function to add the value of the crystals to the current score
+    var crystalValue = function (crystal) {
+        currentScore = currentScore + (crystal.value);
+        $("#yourScore").html(currentScore);
+
+        checkWins();
+    }
+
+    //check to see if you have matched the target score thereby winning ...else losing
+    var checkWins = function () {
+             if(currentScore > targetNumber){
+                 alert("you lost");
+                 lose++;
+                 $("#losses").html(lose);
+                 //restart game
+                 initGame();
+             }
+         else if(currentScore === targetNumber){
+            
+             alert("you won");
+             win++;
+             $("#win").html(win);
+             //restart game
+             initGame();
+             }
+
+    };
+
+    //restart game
+    initGame();
+
+    //on-click for the crystal images
+    $("#blue").on("click", function () {
+        crystalValue(crystal.blue);
+        console.log(crystalValue);
+    });
+
+    $("#green").on("click", function () {
+        crystalValue(crystal.green);
+    });
+
+    $("#red").on("click", function () {
+        crystalValue(crystal.red);
+    });
+
+    $("#yellow").on("click", function () {
+        crystalValue(crystal.yellow);
+    }); 
+    

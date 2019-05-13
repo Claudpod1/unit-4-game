@@ -8,8 +8,8 @@ body {
 }
 
 .jumbo-container {
-    margin: 30px;
-    text-align: center;
+    padding:40px;
+    text-align: left;
     color:#8B008B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 

@@ -59,16 +59,16 @@ var yourScore = "";
     var checkWins = function () {
              if(currentScore > targetNumber){
                  alert("you lost");
-                 lose++;
-                 $("#losses").html(lose);
+                 losses++;
+                 $("#lose").html(losses);
                  //restart game
                  initGame();
              }
          else if(currentScore === targetNumber){
             
              alert("you won");
-             win++;
-             $("#win").html(win);
+             wins++;
+             $("#win").html(wins);
              //restart game
              initGame();
              }

@@ -40,12 +40,14 @@ var yourScore = "";
         console.log(targetNumber);
         $(".targetScore").html(targetNumber);
         $(".yourScore").html(currentScore);
-    };
+    
 
     crystal.blue.value= getRandom(1, 12);
     crystal.red.value = getRandom(1, 12);
     crystal.green.value= getRandom(1, 12);
     crystal.yellow.value = getRandom(1, 12);
+
+    }
 
     //function to add the value of the crystals to the current score
     var crystalValue = function (crystal) {

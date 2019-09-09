@@ -21,4 +21,9 @@ The game has a target score the user is trying to reach. The user will be able t
 * The game restarts whenever the player wins or loses. 
 * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game. 
 
+<b> Techologies used </b>
 
+* JQuery
+* JavaScript 
+* HTML 
+* CSS
